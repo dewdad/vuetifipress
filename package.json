@@ -1,0 +1,14 @@
+{
+  "name": "vuetifipress",
+  "version": "0.0.1",
+  "description": "VuePress with Vuetify.",
+  "main": "index.js",
+  "author": "Takizawa Hiroki <owner@th2.info>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.16"
+  },
+  "dependencies": {
+    "vuetify": "^1.3.2"
+  }
+}
