@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Site Title',
-  theme: 'vuetifipress',
+  theme: 'theme',
   head: [
     ['link', {
       href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
