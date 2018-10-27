@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Takizawa Hiroki <owner@th2.info>",
   "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev --host localhost",
+    "build": "vuepress build"
+  },
   "devDependencies": {
     "vuepress": "^1.0.0-alpha.16"
   },
