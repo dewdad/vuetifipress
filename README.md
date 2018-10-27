@@ -162,7 +162,12 @@ This is a tip
 :::
 
 ::: warning
-This is a warning
+This is a warning  
+But it conflicts with vuetify...
+:::
+
+::: attention
+You can use an attention instead of warning
 :::
 
 ::: danger
@@ -177,7 +182,12 @@ This is a tip
 :::
 
 ::: warning
-This is a warning
+This is a warning  
+But it conflicts with vuetify...
+:::
+
+::: attention
+You can use an attention instead of warning
 :::
 
 ::: danger
