@@ -8,16 +8,16 @@
     <v-navigation-drawer v-model="drawer" app fixed>
       <v-list dense>
         <v-list-tile
-                v-for="item in $site.themeConfig.menu"
+                v-for="item in menuList"
                 :key="item.title"
                 :to="item.link"
         >
           <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon>{{ item.icon || '' }}</v-icon>
           </v-list-tile-action>
 
           <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            <v-list-tile-title :class="item.child ? 'child' : ''">{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -35,8 +35,38 @@
     name: "Layout",
     data () {
       return {
-        drawer: false
+        drawer: true
+      }
+    },
+    computed: {
+      menuList () {
+        const menu = this.$site.themeConfig.menu
+        const currentPage = this.$page
+        const pages = this.$site.pages
+        return this.expand({menu, currentPage, pages})
+      }
+    },
+    methods: {
+      expand ({menu, currentPage, pages}) {
+        const rootDir = /^\/.+\/$/
+        return menu.flatMap(item => {
+          if (item.link.search(rootDir) !== -1 && currentPage.path.startsWith(item.link)) {
+            const index = pages
+                .filter(p => p.path === item.link)
+                .map(p => ({ title: p.title || 'Overview', link: p.path + (p.path === currentPage.path ? '' : 'index.html'), child: true }))
+            const children = pages
+                .filter(p => p.path !== item.link && p.path.startsWith(item.link))
+                .map(p => ({ title: p.title || p.path, link: p.path, child: true }))
+            return [item, ...index, ...children]
+          }
+          return [item]
+        })
       }
     }
   }
 </script>
+
+<style lang="stylus">
+  .child
+    margin-left 1rem
+</style>

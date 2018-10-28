@@ -15,6 +15,11 @@ module.exports = {
         link: '/'
       },
       {
+        title: 'Posts',
+        icon: 'comment',
+        link: '/posts/'
+      },
+      {
         title: 'About',
         icon: 'face',
         link: '/about.html'
