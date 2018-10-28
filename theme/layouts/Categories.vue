@@ -16,7 +16,7 @@
     },
     computed: {
       items () {
-        return this.$categories.list.filter(t => t.name !== 'Portfolio')
+        return this.$categories.list
       }
     }
   }
