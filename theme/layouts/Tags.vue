@@ -1,6 +1,8 @@
 <template>
   <App>
-    <PostGroupIterator :items="items"></PostGroupIterator>
+    <div class="content default">
+      <PostGroupIterator :items="items"></PostGroupIterator>
+    </div>
   </App>
 </template>
 

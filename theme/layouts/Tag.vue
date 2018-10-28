@@ -1,9 +1,11 @@
 <template>
   <App>
-    <PostIterator
-            :title="targetList.filter(t => t.path === $page.path)[0].name"
-            :items="target.posts">
-    </PostIterator>
+    <div class="content default">
+      <PostIterator
+              :title="targetList.filter(t => t.path === $page.path)[0].name"
+              :items="target.posts">
+      </PostIterator>
+    </div>
   </App>
 </template>
 
