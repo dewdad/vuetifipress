@@ -16,6 +16,16 @@ module.exports = {
         link: '/'
       },
       {
+        title: 'Categories',
+        icon: 'folder',
+        link: '/category/'
+      },
+      {
+        title: 'Tags',
+        icon: 'label',
+        link: '/tag/'
+      },
+      {
         title: 'Posts',
         icon: 'comment',
         link: '/posts/'

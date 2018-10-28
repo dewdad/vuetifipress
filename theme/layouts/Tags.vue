@@ -1,13 +1,13 @@
 <template>
   <App>
-    <Content/>
+    Tags
   </App>
 </template>
 
 <script>
   import App from './App'
   export default {
-    name: 'Layout',
+    name: 'Tags',
     components: { App },
     data () {
       return {
