@@ -18,7 +18,7 @@
         <v-card :to="props.item.regularPath" height="100%">
           <v-card-title primary-title>
             <div>
-              <h3 class="headline mb-0">{{ props.item.title }}</h3>
+              <h3 class="subheading mb-0">{{ props.item.title }}</h3>
               <div v-html="strip(props.item.frontmatter.summary || '')" class="summary"></div>
             </div>
           </v-card-title>
@@ -52,6 +52,7 @@
   .subject
     margin-bottom 1rem
   .summary
+    margin-top 1rem
     color grey
     word-break break-all
 </style>
