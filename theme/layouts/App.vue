@@ -23,7 +23,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-content>
-      <v-container fluid fill-height>
+      <v-container fluid>
         <slot></slot>
       </v-container>
     </v-content>

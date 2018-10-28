@@ -1,16 +1,22 @@
 <template>
   <App>
-    Tags
+    <PostGroupIterator :items="items"></PostGroupIterator>
   </App>
 </template>
 
 <script>
   import App from './App'
+  import PostGroupIterator from '../components/PostGroupIterator'
   export default {
     name: 'Tags',
-    components: { App },
+    components: { App, PostGroupIterator },
     data () {
       return {
+      }
+    },
+    computed: {
+      items () {
+        return this.$tags.list
       }
     }
   }
