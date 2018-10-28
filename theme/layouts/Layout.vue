@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import App from './App'
+  import App from '../components/App'
   export default {
     name: 'Layout',
     components: { App },

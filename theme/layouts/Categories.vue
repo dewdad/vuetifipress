@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import App from './App'
+  import App from '../components/App'
   import PostGroupIterator from '../components/PostGroupIterator'
   export default {
     name: 'Categories',

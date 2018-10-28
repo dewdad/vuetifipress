@@ -9,7 +9,7 @@
       <v-list dense>
         <v-list-tile
                 v-for="item in menuList"
-                :key="item.title"
+                :key="item.link"
                 :to="item.link"
         >
           <v-list-tile-action>

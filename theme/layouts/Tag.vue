@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import App from './App'
+  import App from '../components/App'
   import PostIterator from '../components/PostIterator'
   export default {
     name: 'Tag',
