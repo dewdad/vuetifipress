@@ -8,9 +8,9 @@
     <v-navigation-drawer v-model="drawer" app fixed>
       <v-list dense>
         <v-list-tile
-                v-for="item in items"
+                v-for="item in $site.themeConfig.menu"
                 :key="item.title"
-                @click=""
+                :to="item.link"
         >
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -35,11 +35,7 @@
     name: "Layout",
     data () {
       return {
-        drawer: false,
-        items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' }
-        ]
+        drawer: false
       }
     }
   }
