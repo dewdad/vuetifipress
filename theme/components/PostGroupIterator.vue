@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import PostIterator from './PostIterator'
+  import PostIterator from '../global-components/PostIterator'
   export default {
     name: 'PostGroupIterator',
     components: { PostIterator },

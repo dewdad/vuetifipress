@@ -9,7 +9,7 @@
 
 <script>
   import App from '../components/App'
-  import PostIterator from '../components/PostIterator'
+  import PostIterator from '../global-components/PostIterator'
   export default {
     name: 'Category',
     components: { App, PostIterator },
